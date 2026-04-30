@@ -1,0 +1,42 @@
+nyse_research_task:
+  description: >
+    Conduct a thorough research about {topic}
+    Make sure you find any interesting and relevant information given
+    the current day is {current_day}.  Make sure to only include relevant
+    data and infomation based on the current day. Do not include any information that is outdated or irrelevant.
+    Data should only include information about NYSE listed companies that are considered blue 
+    chip companies. Make sure to include any relevant information about the stock performance, 
+    financials, news, and any other relevant data about these companies.
+  expected_output: >
+    A list with at least 10 bullet points of the most relevant information about {topic}
+  agent: researcher
+
+nasdaq_research_task:
+  description: >
+    Conduct a thorough research about {topic}
+     Make sure you find any interesting and relevant information given
+     the current day is {current_day}.  Make sure to only include relevant
+     data and infomation based on the current day. Do not include any information that is outdated or irrelevant.
+     Data should only include information about NASDAQ listed companies that are considered emerging or growth companies. 
+     Make sure to include any relevant information about the stock performance, financials, news, and any other relevant data about these companies. 
+     this should include any relevant information about the stock performance, financials, news, and any other relevant data about these companies.
+     This list can include new and emerging companys, and even penny stocks, as long as they are on the NASDAQ and
+     relevant to the topic.
+  expected_output: >
+    A list with at least 10 bullet points of the most relevant information about {topic}
+  agent: researcher
+
+reporting_task:
+  description: >
+    You will receive TWO separate research outputs as context:
+      1. NYSE blue-chip findings (from nyse_research_task)
+      2. NASDAQ emerging/growth findings (from nasdaq_research_task)
+    Produce ONE combined report with TWO clearly labelled top-level sections —
+    "## NYSE Blue Chips" and "## NASDAQ Emerging & Growth" — and expand every
+    bullet from BOTH inputs into a full paragraph. Do not omit, merge, or
+    summarise away either input.
+  expected_output: >
+    A markdown report with two top-level sections (NYSE and NASDAQ), each
+    containing a subsection per company covered in its source research.
+    No code fences.
+  agent: reporting_analyst
