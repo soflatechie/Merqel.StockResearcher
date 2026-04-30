@@ -1,4 +1,4 @@
-# Debate Crew
+# StockResearcher Crew
 
 A CrewAI project that researches the day's hottest stocks across NYSE blue chips and NASDAQ growth names, then produces a combined markdown report.
 
@@ -39,7 +39,7 @@ Outputs are written to `output/` (folder is created automatically).
 
 ## Configuration
 
-- Agents: [src/debate/config/agents.yaml](src/debate/config/agents.yaml)
-- Tasks: [src/debate/config/tasks.yaml](src/debate/config/tasks.yaml)
-- Crew wiring: [src/debate/crew.py](src/debate/crew.py)
-- Inputs (`topic`, `current_day`): [src/debate/main.py](src/debate/main.py)
+- Agents: [src/StockResearcher/config/agents.yaml](src/StockResearcher/config/agents.yaml)
+- Tasks: [src/StockResearcher/config/tasks.yaml](src/StockResearcher/config/tasks.yaml)
+- Crew wiring: [src/StockResearcher/crew.py](src/StockResearcher/crew.py)
+- Inputs (`topic`, `current_day`): [src/StockResearcher/main.py](src/StockResearcher/main.py)
